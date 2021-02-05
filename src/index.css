@@ -1,6 +1,8 @@
 @import url(vendor/normalize.css);
 @import url(blocks/root/root.css);
 @import url(blocks/list-item/list-item.css);
+@import url(blocks/post-list/post-list.css);
+@import url(blocks/postform/postform.css);
 
 /* модификаторы блоков */
 

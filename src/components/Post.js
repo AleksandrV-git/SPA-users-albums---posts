@@ -4,7 +4,6 @@ import React from 'react';
 const Post = React.memo((props) => {
  // const currentUser = React.useContext(CurrentUserContext);
   const post = props.post; 
-  console.log(post);
 //   const isOwn = card.owner._id === currentUser._id;
 //   const cardDeleteButtonStyle = isOwn ? "block" : 'none';
 //   const isLiked = card.likes.some(i => i._id === currentUser._id);
@@ -15,7 +14,8 @@ const Post = React.memo((props) => {
   return (
     <>
     <div className="list-item">
-      <h2>{post.ownerName}</h2>
+    {/* если не задано ownerName используется заданное через форму имя в userId */}
+      <h2>{post.ownerName || post.userId}</h2>
       <div className=""></div>
       <div className="">{post.title}</div>
       <div className="">{post.body}</div>

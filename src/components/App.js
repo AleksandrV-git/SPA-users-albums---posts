@@ -3,6 +3,7 @@ import usersArr from './users';
 import postsArr from './posts';
 import User from './User';
 import Post from './Post';
+import PostForm from './PostForm';
 
 function App() {
 
@@ -25,26 +26,30 @@ function App() {
     //   .catch((err) => { console.log(`Ошибка: ${err}`); })
   }
 
-  function setPostOwners() {
-    
+  function handleAddPost(post) {
+    setPosts([...posts, post]);
   }
 
   React.useEffect(() => {
     getUsers();
     getPosts();
   }, []);
-  
+
   return (
     <div className="root">
-      <header className="App-header">
+      <header className="">
       </header>
       {/* {users.map((user, i) => {
           return <User key={user.id} user={user}/>
       })} */}
-      {posts.map((post, i) => {
-          users.forEach(user => {if (user.id == post.userId) {post.ownerName = user.name}})
-          return <Post key={post.id} post={post}/>
-      })}
+      <div className='post-list'>
+        <PostForm onAddPost={handleAddPost}/>
+        {posts.map((post, i) => {
+          users.forEach(user => { if (user.id == post.userId) { post.ownerName = user.name } })
+          return <Post key={post.id} post={post} />
+        })}
+      </div>
+
     </div>
   );
 }
