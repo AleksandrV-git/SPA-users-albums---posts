@@ -19,10 +19,12 @@ function PopupForm(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    // так как нет бэкенда и базы данных в id записал null, имя сохранил в userName 
     props.onAddPost({
-      userId: name,
+      userName: name,
+      userId: null,
       id: null,
-      title: 'bla',
+      title: title,
       body: messageText,
     });
   }

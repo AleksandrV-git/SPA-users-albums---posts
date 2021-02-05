@@ -14,8 +14,8 @@ const Post = React.memo((props) => {
   return (
     <>
     <div className="list-item">
-    {/* если не задано ownerName используется заданное через форму имя в userId */}
-      <h2>{post.ownerName || post.userId}</h2>
+    {/* если не задано ownerName используется заданное через форму имя в userName */}
+      <h2>{post.ownerName || post.userName}</h2>
       <div className=""></div>
       <div className="">{post.title}</div>
       <div className="">{post.body}</div>
