@@ -11,6 +11,9 @@ function NavBar() {
         <li className="menu__list-item">
           <NavLink className="menu__item" activeClassName="menu__item_active" to="/posts">Посты</NavLink>
         </li>
+        <li className="menu__list-item">
+          <NavLink className="menu__item" activeClassName="menu__item_active" to="/albums">Альбомы</NavLink>
+        </li>
       </ul>
 
     </nav>
