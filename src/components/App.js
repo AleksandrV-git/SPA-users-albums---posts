@@ -7,7 +7,7 @@ import albumsArr from '../Data/albums';
 import photosArr from '../Data/photos';
 import User from './User';
 import Post from './Post';
-import Album from './Album';
+import Albums from './Albums';
 import AlbumPhotos from './AlbumPhotos';
 import PostForm from './PostForm';
 import NavBar from './NavBar';
@@ -55,10 +55,13 @@ function App() {
     setPosts([...posts, post]);
   }
 
-  React.useEffect(() => {
+  function getAlbumsData() {
     getUsers();
-    getPosts();
     getAlbums();
+  }
+
+  React.useEffect(() => {
+    getPosts();
     getPhotos();
   }, []);
 
@@ -82,15 +85,10 @@ function App() {
             </div>
           </Route>
           <Route exact path="/albums">
-            <div className='post-list'>
-              {albums.map((album, i) => {
-                users.forEach(user => { if (user.id == album.userId) { album.ownerName = user.name } })
-                return <Album key={album.id} album={album} />
-              })}
-            </div>
+            <Albums getAlbumsData={getAlbumsData} albums={albums} users={users}/>
           </Route>
           <Route exact path="/albums/:id">
-            <AlbumPhotos serverData={photos}/>
+            <AlbumPhotos serverData={photos} />
           </Route>
         </Switch>
       </div>
