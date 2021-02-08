@@ -6,6 +6,7 @@ import postsArr from '../Data/posts';
 import albumsArr from '../Data/albums';
 import photosArr from '../Data/photos';
 import User from './User';
+import Posts from './Posts';
 import Post from './Post';
 import Albums from './Albums';
 import AlbumPhotos from './AlbumPhotos';
@@ -55,13 +56,29 @@ function App() {
     setPosts([...posts, post]);
   }
 
+  function setAlbumOwner(album) {
+    const owner = users.find((user) => { return user.id == album.userId });
+    if (owner) { album.ownerName = owner.name }
+    else { console.log('имя владельца альбома не найдено'); }
+  }
+
+  function setPostOwner(post) {
+    const owner = users.find((user) => { return user.id == post.userId });
+    if (owner) { post.ownerName = owner.name }
+    else { console.log('имя владельца поста не найдено'); }
+  }
+
   function getAlbumsData() {
     getUsers();
     getAlbums();
   }
 
-  React.useEffect(() => {
+  function getPostsData() {
+    getUsers();
     getPosts();
+  }
+
+  React.useEffect(() => {
     getPhotos();
   }, []);
 
@@ -76,16 +93,11 @@ function App() {
             {users.map((user, i) => { return <User key={user.id} user={user} /> })}
           </Route>
           <Route path="/posts">
-            <div className='post-list'>
-              <PostForm onAddPost={handleAddPost} />
-              {posts.map((post, i) => {
-                users.forEach(user => { if (user.id == post.userId) { post.ownerName = user.name } })
-                return <Post key={post.id} post={post} />
-              })}
-            </div>
+            <PostForm onAddPost={handleAddPost} />
+            <Posts getPostsData={getPostsData} setPostOwner={setPostOwner} posts={posts} />
           </Route>
           <Route exact path="/albums">
-            <Albums getAlbumsData={getAlbumsData} albums={albums} users={users}/>
+            <Albums getAlbumsData={getAlbumsData} setAlbumOwner={setAlbumOwner} albums={albums} />
           </Route>
           <Route exact path="/albums/:id">
             <AlbumPhotos serverData={photos} />
