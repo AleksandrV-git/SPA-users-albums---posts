@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PopupForm(props) {
+function PopupForm({ onAddPost }) {
 
   const [name, setName] = React.useState('');
   const [messageText, setMessageText] = React.useState('');
@@ -20,7 +20,7 @@ function PopupForm(props) {
   function handleSubmit(e) {
     e.preventDefault();
     // так как нет бэкенда и базы данных в id записал null, имя сохранил в userName 
-    props.onAddPost({
+    onAddPost({
       userName: name,
       userId: null,
       id: null,
@@ -31,7 +31,7 @@ function PopupForm(props) {
 
   return (
     <>
-      <form className="postform" onSubmit={handleSubmit} name={props.formName}>
+      <form className="postform" onSubmit={handleSubmit} name='postForm'>
         <input value={name} onChange={handleName} id="name" type="text" name="name"
           className="" placeholder="Имя" required minLength="2" maxLength="30" />
         <input value={title} onChange={handleTitle} id="title" type="text" name="title"

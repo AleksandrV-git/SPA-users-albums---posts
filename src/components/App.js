@@ -5,9 +5,8 @@ import usersArr from '../Data/users';
 import postsArr from '../Data/posts';
 import albumsArr from '../Data/albums';
 import photosArr from '../Data/photos';
-import User from './User';
+import Users from './Users';
 import Posts from './Posts';
-import Post from './Post';
 import Albums from './Albums';
 import AlbumPhotos from './AlbumPhotos';
 import PostForm from './PostForm';
@@ -90,7 +89,7 @@ function App() {
         </header>
         <Switch>
           <Route path="/users">
-            {users.map((user, i) => { return <User key={user.id} user={user} /> })}
+            <Users getUsers={getUsers} users={users} />
           </Route>
           <Route path="/posts">
             <PostForm onAddPost={handleAddPost} />

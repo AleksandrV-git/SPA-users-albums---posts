@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-function Album (props) {
+function Album ({album}) {
   
-  const album = props.album;
-
   return (
     <Link to={`/albums/${album.id}`}>
       <div className="list-item">

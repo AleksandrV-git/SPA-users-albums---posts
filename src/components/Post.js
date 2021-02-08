@@ -1,8 +1,6 @@
 import React from 'react';
 
-const Post = React.memo((props) => {
-  const post = props.post;
-
+const Post = React.memo(({post}) => {
 
   return (
     <>

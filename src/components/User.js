@@ -1,9 +1,6 @@
 import React from 'react';
-//import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
-const User = React.memo((props) => {
-
-    const user = props.user;
+const User = React.memo(({user}) => {
 
   return (
     <>

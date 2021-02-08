@@ -1,8 +1,6 @@
 import React from 'react';
 
-const Photo = React.memo((props) => {
-
-  const photo = props.photo;
+const Photo = React.memo(({photo}) => {
   
   return (
     <div className="list-item">
