@@ -3,16 +3,19 @@ import { useParams } from 'react-router-dom';
 
 import Photo from './Photo';
 
-const AlbumPhotos = React.memo((props) => {
+const AlbumPhotos = React.memo(({photos, getPhotos}) => {
   
   let { id } = useParams();
 
-  const photosData = props.serverData;
-  const photos = photosData.filter(photo => photo.albumId == id);
+  const albumPhotos = photos.filter(photo => photo.albumId == id);
+
+  React.useEffect(() => {
+    getPhotos();
+  }, []);
 
   return (
     <>
-      {photos.map((photo, i) => <Photo key={photo.id} photo={photo}/> )}
+      {albumPhotos.map((photo, i) => <Photo key={photo.id} photo={photo}/> )}
     </>
   )
 })

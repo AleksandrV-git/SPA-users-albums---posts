@@ -5,6 +5,7 @@ import usersArr from '../Data/users';
 import postsArr from '../Data/posts';
 import albumsArr from '../Data/albums';
 import photosArr from '../Data/photos';
+import api from '../utils/api';
 import Users from './Users';
 import Posts from './Posts';
 import Albums from './Albums';
@@ -21,38 +22,38 @@ function App() {
 
 
   function getUsers() {
-    const arr = usersArr.slice();
-    setUsers(arr);
-    // api.getInitialCards()
-    //   .then((res) => { const arr = res.slice(); setCards(arr) })
-    //   .catch((err) => { console.log(`Ошибка: ${err}`); })
-  }
-
-  function getPosts() {
-    setPosts([...postsArr]);
-    // api.getInitialCards()
-    //   .then((res) => { const arr = res.slice(); setCards(arr) })
-    //   .catch((err) => { console.log(`Ошибка: ${err}`); })
-  }
-
-  function getAlbums() {
-    setAlbums([...albumsArr]);
-    console.log(albums);
-    // api.getInitialCards()
-    //   .then((res) => { const arr = res.slice(); setCards(arr) })
-    //   .catch((err) => { console.log(`Ошибка: ${err}`); })
+    //setUsers(usersArr);
+    api.getUsers()
+      .then((res) => { setUsers(res); })
+      .catch((err) => { console.log(`Ошибка: ${err}`); })
   }
 
   function getPhotos() {
-    setPhotos([...photosArr]);
-    console.log(photos);
-    // api.getInitialCards()
-    //   .then((res) => { const arr = res.slice(); setCards(arr) })
-    //   .catch((err) => { console.log(`Ошибка: ${err}`); })
+    //setPhotos(photosArr);
+    api.getPhotos()
+      .then((res) => { setPhotos(res); })
+      .catch((err) => { console.log(`Ошибка: ${err}`); })
   }
 
-  function handleAddPost(post) {
-    setPosts([...posts, post]);
+  function getAlbums() {
+    //setAlbums(albumsArr);
+    api.getAlbums()
+      .then((res) => { setAlbums(res); })
+      .catch((err) => { console.log(`Ошибка: ${err}`); })
+  }
+
+  function getPosts() {
+    //setPosts(postsArr);
+    api.getPosts()
+      .then((res) => { setPosts(res); })
+      .catch((err) => { console.log(`Ошибка: ${err}`); })
+  }
+
+  function handleAddPost(postData) {
+    //setPosts([...posts, post]);
+    api.postMessage(postData)
+      .then((res) => { setPosts([...posts, res]); })
+      .catch((err) => { console.log(`Ошибка: ${err}`); })
   }
 
   function setAlbumOwner(album) {
@@ -77,10 +78,6 @@ function App() {
     getPosts();
   }
 
-  React.useEffect(() => {
-    getPhotos();
-  }, []);
-
   return (
     <BrowserRouter>
       <div className="root">
@@ -99,7 +96,7 @@ function App() {
             <Albums getAlbumsData={getAlbumsData} setAlbumOwner={setAlbumOwner} albums={albums} />
           </Route>
           <Route exact path="/albums/:id">
-            <AlbumPhotos serverData={photos} />
+            <AlbumPhotos getPhotos={getPhotos} photos={photos} />
           </Route>
         </Switch>
       </div>
