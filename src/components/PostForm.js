@@ -30,17 +30,15 @@ function PopupForm({ onAddPost }) {
   }
 
   return (
-    <>
-      <form className="postform" onSubmit={handleSubmit} name='postForm'>
+      <form className="post-form" onSubmit={handleSubmit} name='postForm'>
         <input value={name} onChange={handleName} id="name" type="text" name="name"
-          className="" placeholder="Имя" required minLength="2" maxLength="30" />
+          className="post-form__input" placeholder="Имя" required minLength="2" maxLength="30" />
         <input value={title} onChange={handleTitle} id="title" type="text" name="title"
-          className="" placeholder="Тема сообщения" required minLength="2" maxLength="30" />
+          className="post-form__input" placeholder="Тема сообщения" required minLength="2" maxLength="30" />
         <input value={messageText} onChange={handleMessageText} id="message" type="text" name="message"
-          className="" placeholder="текст сообщения" required minLength="2" maxLength="100" />
+          className="post-form__input" placeholder="текст сообщения" required minLength="2" maxLength="100" />
         <button className="button">Сохранить</button>
       </form>
-    </>
   );
 }
 

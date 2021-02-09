@@ -81,7 +81,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="root">
-        <header className="">
+        <header className="header">
+          <div className="logo">SinglePageApplication</div>
           <NavBar />
         </header>
         <Switch>

@@ -9,9 +9,9 @@ const Users = React.memo(({ users, getUsers }) => {
   }, []);
 
   return (
-    <div className='user-list'>
+    <ul className='user-list'>
       {users.map((user, i) => { return <User key={user.id} user={user} /> })}
-    </div>
+    </ul>
   )
 })
 

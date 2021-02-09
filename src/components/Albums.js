@@ -9,12 +9,12 @@ const Albums = React.memo(({ albums, setAlbumOwner, getAlbumsData }) => {
   }, []);
 
   return (
-    <div className='post-list'>
+    <ul className='album-list'>
       {albums.map((album, i) => {
         setAlbumOwner(album);
         return <Album key={album.id} album={album} />
       })}
-    </div>
+    </ul>
   )
 })
 

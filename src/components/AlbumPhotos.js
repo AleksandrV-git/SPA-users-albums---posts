@@ -14,9 +14,9 @@ const AlbumPhotos = React.memo(({photos, getPhotos}) => {
   }, []);
 
   return (
-    <>
+    <ul className="photo-list">
       {albumPhotos.map((photo, i) => <Photo key={photo.id} photo={photo}/> )}
-    </>
+    </ul>
   )
 })
 

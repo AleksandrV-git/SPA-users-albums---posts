@@ -6,10 +6,10 @@ function Album ({album}) {
   
   return (
     <Link to={`/albums/${album.id}`}>
-      <div className="list-item">
-        <h2>{album.ownerName}</h2>
-        <div className="">{album.title}</div>
-      </div>
+      <li className="albums-item">
+        <h2 className="albums-item__title">{album.ownerName}</h2>
+        <p className="albums-item__description">{album.title}</p>
+      </li>
     </Link>
   )
 }

@@ -9,12 +9,12 @@ const Posts = React.memo(({ posts, setPostOwner, getPostsData }) => {
   }, []);
 
   return (
-    <div className='post-list'>
+    <ul className='user-list'>
       {posts.map((post, i) => {
         setPostOwner(post);
         return <Post key={post.id} post={post} />
       })}
-    </div>
+    </ul>
   )
 })
 

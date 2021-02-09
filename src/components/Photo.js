@@ -3,10 +3,10 @@ import React from 'react';
 const Photo = React.memo(({photo}) => {
   
   return (
-    <div className="list-item">
-      <h2>{photo.title}</h2>
-      <img className='' src={photo.thumbnailUrl} alt='' />
-    </div>
+    <li className="photo-item">
+      <img className="photo-item__img" src={photo.thumbnailUrl} alt='' />
+      <p className="photo-item__description" >{photo.title}</p>
+    </li>
   )
 })
 

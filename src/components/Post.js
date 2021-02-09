@@ -3,15 +3,12 @@ import React from 'react';
 const Post = React.memo(({post}) => {
 
   return (
-    <>
-      <div className="list-item">
+      <li className="post-item">
         {/* если не задано ownerName используется заданное через форму имя в userName */}
-        <h2>{post.ownerName || post.userName || ''}</h2>
-        <div className=""></div>
-        <div className="">{post.title}</div>
-        <div className="">{post.body}</div>
-      </div>
-    </>
+        <h2 className="post-item__title">{post.ownerName || post.userName || ''}</h2>
+        <div className="post-item__message-subject">{post.title}</div>
+        <div className="post-item__text">{post.body}</div>
+      </li>
   )
 })
 
