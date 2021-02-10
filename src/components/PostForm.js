@@ -35,9 +35,9 @@ function PopupForm({ onAddPost }) {
           className="post-form__input" placeholder="Имя" required minLength="2" maxLength="30" />
         <input value={title} onChange={handleTitle} id="title" type="text" name="title"
           className="post-form__input" placeholder="Тема сообщения" required minLength="2" maxLength="30" />
-        <input value={messageText} onChange={handleMessageText} id="message" type="text" name="message"
-          className="post-form__input" placeholder="текст сообщения" required minLength="2" maxLength="100" />
-        <button className="button">Сохранить</button>
+        <textarea value={messageText} onChange={handleMessageText} id="message" type="text" name="message"
+          className="post-form__message-input" placeholder="Текст сообщения" required minLength="2" maxLength="1000" />
+        <button className="button post-form__button">Опубликовать</button>
       </form>
   );
 }

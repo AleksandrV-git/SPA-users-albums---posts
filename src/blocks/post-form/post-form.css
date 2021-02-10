@@ -1,0 +1,10 @@
+@import URL(./__input/post-form__input.css);
+@import URL(./__message-input/post-form__message-input.css);
+@import URL(./__button/post-form__button.css);
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 30px auto 0 ;
+}

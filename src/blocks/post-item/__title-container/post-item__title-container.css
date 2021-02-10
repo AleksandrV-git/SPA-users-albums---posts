@@ -1,0 +1,4 @@
+.post-item__title-container {
+  display: flex;
+  align-items: center;
+}

@@ -3,10 +3,12 @@
 @import url(blocks/header/header.css);
 @import url(blocks/logo/logo.css);
 @import url(blocks/menu/menu.css);
+@import url(blocks/button/button.css);
 @import url(blocks/user-list/user-list.css);
 @import url(blocks/user-item/user-item.css);
 @import url(blocks/post-list/post-list.css);
-@import url(blocks/postform/postform.css);
+@import url(blocks/post-item/post-item.css);
+@import url(blocks/post-form/post-form.css);
 
 /* модификаторы блоков */
 

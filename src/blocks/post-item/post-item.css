@@ -1,0 +1,13 @@
+@import URL(./__user-icon/post-item__user-icon.css);
+@import URL(./__title-container/post-item__title-container.css);
+@import URL(./__title/post-item__title.css);
+@import URL(./__text/post-item__text.css);
+@import URL(./__message-subject/post-item__message-subject.css);
+
+.post-item {
+  list-style: none;
+  margin: 15px 0;
+  padding: 10px 25px 20px;
+  background-color: rgb(241, 241, 241); 
+  border-radius: 5px;
+}
