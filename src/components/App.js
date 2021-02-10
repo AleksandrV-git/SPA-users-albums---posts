@@ -57,13 +57,13 @@ function App() {
   }
 
   function setAlbumOwner(album) {
-    const owner = users.find((user) => { return user.id == album.userId });
+    const owner = users.find((user) => { return user.id === album.userId });
     if (owner) { album.ownerName = owner.name }
     else { console.log('имя владельца альбома не найдено'); }
   }
 
   function setPostOwner(post) {
-    const owner = users.find((user) => { return user.id == post.userId });
+    const owner = users.find((user) => { return user.id === post.userId });
     if (owner) { post.ownerName = owner.name }
     else { console.log('имя владельца поста не найдено'); }
   }

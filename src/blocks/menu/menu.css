@@ -1,0 +1,15 @@
+@import URL(./__list/menu__list.css);
+@import URL(./__list-item/menu__list-item.css);
+@import URL(./__item/menu__item.css);
+
+/* модификаторы элементов */
+@import URL(./__item/menu__item_active.css);
+
+.menu {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-self: flex-end;
+  font-size: 18px;
+  line-height: 24px; 
+}
