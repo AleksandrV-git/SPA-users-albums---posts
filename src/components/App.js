@@ -18,7 +18,6 @@ function App() {
   const [photos, setPhotos] = React.useState([]);
   const [currentAlbumOwner, setCurrentAlbumOwner] = React.useState("");
 
-
   function getUsers() {
     api.getUsers()
       .then((res) => { setUsers(res); })
@@ -75,27 +74,27 @@ function App() {
     <BrowserRouter>
       <div className="root">
         <header className="header">
-          <Link className="logo" to="/">SinglePageApplication</Link>
+          <Link className="logo" to="/SPA-users-albums-and-posts/">SinglePageApplication</Link>
           <NavBar />
         </header>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/SPA-users-albums-and-posts/">
             <Home />
           </Route>
-          <Route path="/users">
+          <Route path="/SPA-users-albums-and-posts/users">
             <Users getUsers={getUsers} users={users} />
           </Route>
-          <Route path="/posts">
+          <Route path="/SPA-users-albums-and-posts/posts">
             <PostForm onAddPost={handleAddPost} />
             <Posts getPostsData={getPostsData} setPostOwner={setPostOwner} posts={posts} />
           </Route>
-          <Route exact path="/albums">
+          <Route exact path="/SPA-users-albums-and-posts/albums">
             <Albums onAlbumClick={setCurrentAlbumOwner} getAlbumsData={getAlbumsData} setAlbumOwner={setAlbumOwner} albums={albums} />
           </Route>
-          <Route exact path="/albums/:id">
+          <Route exact path="/SPA-users-albums-and-posts/albums/:id">
             <AlbumPhotos getPhotos={getPhotos} photos={photos} currentAlbumOwner={currentAlbumOwner} />
           </Route>
-          <Route>
+          <Route path="*">
             <p>Not Found</p>
           </Route>
         </Switch>
