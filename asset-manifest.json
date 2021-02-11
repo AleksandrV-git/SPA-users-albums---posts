@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/AleksandrV-git/SPA-users-albums---posts.git/static/css/main.a17a9e04.chunk.css",
+    "main.js": "/AleksandrV-git/SPA-users-albums---posts.git/static/js/main.074dbfb8.chunk.js",
+    "main.js.map": "/AleksandrV-git/SPA-users-albums---posts.git/static/js/main.074dbfb8.chunk.js.map",
+    "runtime-main.js": "/AleksandrV-git/SPA-users-albums---posts.git/static/js/runtime-main.b720215d.js",
+    "runtime-main.js.map": "/AleksandrV-git/SPA-users-albums---posts.git/static/js/runtime-main.b720215d.js.map",
+    "static/js/2.3bccc50b.chunk.js": "/AleksandrV-git/SPA-users-albums---posts.git/static/js/2.3bccc50b.chunk.js",
+    "static/js/2.3bccc50b.chunk.js.map": "/AleksandrV-git/SPA-users-albums---posts.git/static/js/2.3bccc50b.chunk.js.map",
+    "static/js/3.10875da8.chunk.js": "/AleksandrV-git/SPA-users-albums---posts.git/static/js/3.10875da8.chunk.js",
+    "static/js/3.10875da8.chunk.js.map": "/AleksandrV-git/SPA-users-albums---posts.git/static/js/3.10875da8.chunk.js.map",
+    "index.html": "/AleksandrV-git/SPA-users-albums---posts.git/index.html",
+    "static/css/main.a17a9e04.chunk.css.map": "/AleksandrV-git/SPA-users-albums---posts.git/static/css/main.a17a9e04.chunk.css.map",
+    "static/js/2.3bccc50b.chunk.js.LICENSE.txt": "/AleksandrV-git/SPA-users-albums---posts.git/static/js/2.3bccc50b.chunk.js.LICENSE.txt",
+    "static/media/user.28e44cb7.png": "/AleksandrV-git/SPA-users-albums---posts.git/static/media/user.28e44cb7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b720215d.js",
+    "static/js/2.3bccc50b.chunk.js",
+    "static/css/main.a17a9e04.chunk.css",
+    "static/js/main.074dbfb8.chunk.js"
+  ]
+}
