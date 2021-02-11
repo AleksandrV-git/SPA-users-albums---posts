@@ -4,7 +4,7 @@ const Photo = React.memo(({photo}) => {
   
   return (
     <li className="photo-item">
-      <img className="photo-item__img" src={photo.thumbnailUrl} alt='' />
+      <img className="photo-item__img" src={photo.url} alt='' />
       <p className="photo-item__description" >{photo.title}</p>
     </li>
   )

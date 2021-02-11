@@ -11,6 +11,8 @@
 @import url(blocks/post-form/post-form.css);
 @import url(blocks/album-list/album-list.css);
 @import url(blocks/albums-item/albums-item.css);
+@import url(blocks/photo-list/photo-list.css);
+@import url(blocks/photo-item/photo-item.css);
 
 /* модификаторы блоков */
 

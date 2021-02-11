@@ -1,0 +1,12 @@
+@import URL(./__img/photo-item__img.css);
+@import URL(./__description/photo-item__description.css);
+
+.photo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 157px;
+  border-radius: 15px;
+  padding: 20px; 
+}
