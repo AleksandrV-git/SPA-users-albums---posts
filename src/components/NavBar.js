@@ -6,13 +6,13 @@ function NavBar() {
     <nav className="menu">
       <ul className="menu__list">
         <li className="menu__list-item">
-          <NavLink exact className="menu__item" activeClassName="menu__item_active" to="/SPA-users-albums-and-posts/users">Пользователи</NavLink>
+          <NavLink exact className="menu__item" activeClassName="menu__item_active" to="/users">Пользователи</NavLink>
         </li>
         <li className="menu__list-item">
-          <NavLink className="menu__item" activeClassName="menu__item_active" to="/SPA-users-albums-and-posts/posts">Посты</NavLink>
+          <NavLink className="menu__item" activeClassName="menu__item_active" to="/posts">Посты</NavLink>
         </li>
         <li className="menu__list-item">
-          <NavLink className="menu__item" activeClassName="menu__item_active" to="/SPA-users-albums-and-posts/albums">Альбомы</NavLink>
+          <NavLink className="menu__item" activeClassName="menu__item_active" to="/albums">Альбомы</NavLink>
         </li>
       </ul>
 

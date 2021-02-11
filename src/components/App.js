@@ -71,27 +71,27 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/SPA-users-albums-and-posts">
       <div className="root">
         <header className="header">
-          <Link className="logo" to="/SPA-users-albums-and-posts/">SinglePageApplication</Link>
+          <Link className="logo" to="/">SinglePageApplication</Link>
           <NavBar />
         </header>
         <Switch>
-          <Route exact path="/SPA-users-albums-and-posts/">
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/SPA-users-albums-and-posts/users">
+          <Route path="/users">
             <Users getUsers={getUsers} users={users} />
           </Route>
-          <Route path="/SPA-users-albums-and-posts/posts">
+          <Route path="/posts">
             <PostForm onAddPost={handleAddPost} />
             <Posts getPostsData={getPostsData} setPostOwner={setPostOwner} posts={posts} />
           </Route>
-          <Route exact path="/SPA-users-albums-and-posts/albums">
+          <Route exact path="/albums">
             <Albums onAlbumClick={setCurrentAlbumOwner} getAlbumsData={getAlbumsData} setAlbumOwner={setAlbumOwner} albums={albums} />
           </Route>
-          <Route exact path="/SPA-users-albums-and-posts/albums/:id">
+          <Route exact path="/albums/:id">
             <AlbumPhotos getPhotos={getPhotos} photos={photos} currentAlbumOwner={currentAlbumOwner} />
           </Route>
           <Route path="*">
