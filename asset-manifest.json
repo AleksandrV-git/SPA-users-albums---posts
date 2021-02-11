@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/SPA-users-albums-and-posts/static/css/main.a17a9e04.chunk.css",
-    "main.js": "/SPA-users-albums-and-posts/static/js/main.7dd296ea.chunk.js",
-    "main.js.map": "/SPA-users-albums-and-posts/static/js/main.7dd296ea.chunk.js.map",
-    "runtime-main.js": "/SPA-users-albums-and-posts/static/js/runtime-main.e5e0569f.js",
-    "runtime-main.js.map": "/SPA-users-albums-and-posts/static/js/runtime-main.e5e0569f.js.map",
-    "static/js/2.aee095a9.chunk.js": "/SPA-users-albums-and-posts/static/js/2.aee095a9.chunk.js",
-    "static/js/2.aee095a9.chunk.js.map": "/SPA-users-albums-and-posts/static/js/2.aee095a9.chunk.js.map",
-    "static/js/3.ad3a23ae.chunk.js": "/SPA-users-albums-and-posts/static/js/3.ad3a23ae.chunk.js",
-    "static/js/3.ad3a23ae.chunk.js.map": "/SPA-users-albums-and-posts/static/js/3.ad3a23ae.chunk.js.map",
+    "main.js": "/SPA-users-albums-and-posts/static/js/main.c569309a.chunk.js",
+    "main.js.map": "/SPA-users-albums-and-posts/static/js/main.c569309a.chunk.js.map",
+    "runtime-main.js": "/SPA-users-albums-and-posts/static/js/runtime-main.325f4f31.js",
+    "runtime-main.js.map": "/SPA-users-albums-and-posts/static/js/runtime-main.325f4f31.js.map",
+    "static/js/2.ed140098.chunk.js": "/SPA-users-albums-and-posts/static/js/2.ed140098.chunk.js",
+    "static/js/2.ed140098.chunk.js.map": "/SPA-users-albums-and-posts/static/js/2.ed140098.chunk.js.map",
+    "static/js/3.8f70f859.chunk.js": "/SPA-users-albums-and-posts/static/js/3.8f70f859.chunk.js",
+    "static/js/3.8f70f859.chunk.js.map": "/SPA-users-albums-and-posts/static/js/3.8f70f859.chunk.js.map",
     "index.html": "/SPA-users-albums-and-posts/index.html",
     "static/css/main.a17a9e04.chunk.css.map": "/SPA-users-albums-and-posts/static/css/main.a17a9e04.chunk.css.map",
-    "static/js/2.aee095a9.chunk.js.LICENSE.txt": "/SPA-users-albums-and-posts/static/js/2.aee095a9.chunk.js.LICENSE.txt",
+    "static/js/2.ed140098.chunk.js.LICENSE.txt": "/SPA-users-albums-and-posts/static/js/2.ed140098.chunk.js.LICENSE.txt",
     "static/media/user.28e44cb7.png": "/SPA-users-albums-and-posts/static/media/user.28e44cb7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e5e0569f.js",
-    "static/js/2.aee095a9.chunk.js",
+    "static/js/runtime-main.325f4f31.js",
+    "static/js/2.ed140098.chunk.js",
     "static/css/main.a17a9e04.chunk.css",
-    "static/js/main.7dd296ea.chunk.js"
+    "static/js/main.c569309a.chunk.js"
   ]
 }
