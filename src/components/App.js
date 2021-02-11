@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
 import usersArr from '../Data/users';
 import postsArr from '../Data/posts';
 import albumsArr from '../Data/albums';
 import photosArr from '../Data/photos';
 import api from '../utils/api';
+import Home from './Home';
 import Users from './Users';
 import Posts from './Posts';
 import Albums from './Albums';
@@ -19,6 +20,7 @@ function App() {
   const [posts, setPosts] = React.useState([]);
   const [albums, setAlbums] = React.useState([]);
   const [photos, setPhotos] = React.useState([]);
+  const [currentAlbumOwner, setCurrentAlbumOwner] = React.useState("");
 
 
   function getUsers() {
@@ -82,10 +84,13 @@ function App() {
     <BrowserRouter>
       <div className="root">
         <header className="header">
-          <div className="logo">SinglePageApplication</div>
+          <Link className="logo" to="/">SinglePageApplication</Link>
           <NavBar />
         </header>
         <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route path="/users">
             <Users getUsers={getUsers} users={users} />
           </Route>
@@ -94,10 +99,13 @@ function App() {
             <Posts getPostsData={getPostsData} setPostOwner={setPostOwner} posts={posts} />
           </Route>
           <Route exact path="/albums">
-            <Albums getAlbumsData={getAlbumsData} setAlbumOwner={setAlbumOwner} albums={albums} />
+            <Albums onAlbumClick={setCurrentAlbumOwner} getAlbumsData={getAlbumsData} setAlbumOwner={setAlbumOwner} albums={albums} />
           </Route>
           <Route exact path="/albums/:id">
-            <AlbumPhotos getPhotos={getPhotos} photos={photos} />
+            <AlbumPhotos getPhotos={getPhotos} photos={photos} currentAlbumOwner={currentAlbumOwner} />
+          </Route>
+          <Route>
+            <p>Not Found</p>
           </Route>
         </Switch>
       </div>

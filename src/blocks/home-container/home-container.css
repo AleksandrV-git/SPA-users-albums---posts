@@ -1,0 +1,8 @@
+@import url(./__title/home-container__title.css);
+@import url(./__button/home-container__button.css);
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}

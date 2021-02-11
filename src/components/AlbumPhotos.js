@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import Photo from './Photo';
 
-const AlbumPhotos = React.memo(({photos, getPhotos}) => {
+const AlbumPhotos = React.memo(({photos, getPhotos, currentAlbumOwner}) => {
   
   let { id } = useParams();
 
@@ -14,9 +14,12 @@ const AlbumPhotos = React.memo(({photos, getPhotos}) => {
   }, []);
 
   return (
+    <>
+    <h2 className="section-title">{currentAlbumOwner}</h2>
     <ul className="photo-list">
       {albumPhotos.map((photo, i) => <Photo key={photo.id} photo={photo}/> )}
     </ul>
+    </>
   )
 })
 
