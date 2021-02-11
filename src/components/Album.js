@@ -10,7 +10,7 @@ function Album({ album, onAlbumClick}) {
   }
 
   return (
-    <Link onClick={handleAlbumClick} className="albums-item__link" to={`/SPA-users-albums-and-posts/albums/${album.id}`}>
+    <Link onClick={handleAlbumClick} className="albums-item__link" to={`/albums/${album.id}`}>
       <li className="albums-item">
         <div className="albums-item__title-container" >
           <img className="albums-item__user-icon" src={userIcon} ></img>
