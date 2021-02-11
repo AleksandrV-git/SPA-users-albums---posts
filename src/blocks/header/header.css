@@ -2,13 +2,13 @@
   position: relative;
   min-height: 50px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 1px solid #1A1B22;
 }
 
 @media (max-width: 767px) {
   .header {
-    min-height: 56px;
+    min-height: 30px;
   }
 }

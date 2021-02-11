@@ -6,3 +6,9 @@
   margin: 30px auto;
   list-style: none; 
 }
+
+@media (max-width: 900px) {
+  .photo-list {
+    grid-template-columns: repeat(auto-fit,minmax(223px,1fr));
+  }
+}

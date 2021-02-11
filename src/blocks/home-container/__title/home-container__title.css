@@ -3,3 +3,9 @@
   text-align: center;
   font-weight: normal;
 }
+
+@media (max-width: 720px) {
+  .home-container__title {
+   font-size: 18px;
+  }
+}

@@ -6,3 +6,9 @@
   margin: 64px auto;
   list-style: none;
 }
+
+@media (max-width: 900px) {
+  .album-list {
+    grid-template-columns: repeat(auto-fit,minmax(223px,1fr));
+  }
+}

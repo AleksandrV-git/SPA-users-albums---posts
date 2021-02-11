@@ -6,6 +6,6 @@
   margin-right: 10px;
   min-height: 80px;
   max-height: none;
-  width: 500px;
+  max-width: 500px;
   resize: vertical;
 }

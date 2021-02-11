@@ -2,3 +2,9 @@
   margin: 10px auto 0;
   text-align: center;
 }
+
+@media (max-width: 350px) {
+  .home-container__button {
+    width: 150px;
+  }
+}
