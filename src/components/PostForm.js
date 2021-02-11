@@ -23,7 +23,6 @@ function PopupForm({ onAddPost }) {
     onAddPost({
       userName: name,
       userId: null,
-      //id: null,
       title: title,
       body: messageText,
     });

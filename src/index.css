@@ -16,9 +16,6 @@
 @import url(blocks/photo-list/photo-list.css);
 @import url(blocks/photo-item/photo-item.css);
 
-/* модификаторы блоков */
-
-
 body {
   margin: 0;
   background-color: #ffffff;

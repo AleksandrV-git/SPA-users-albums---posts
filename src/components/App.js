@@ -1,10 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
-import usersArr from '../Data/users';
-import postsArr from '../Data/posts';
-import albumsArr from '../Data/albums';
-import photosArr from '../Data/photos';
 import api from '../utils/api';
 import Home from './Home';
 import Users from './Users';
@@ -24,35 +20,30 @@ function App() {
 
 
   function getUsers() {
-    //setUsers(usersArr);
     api.getUsers()
       .then((res) => { setUsers(res); })
       .catch((err) => { console.log(`Ошибка: ${err}`); })
   }
 
   function getPhotos() {
-    //setPhotos(photosArr);
     api.getPhotos()
       .then((res) => { setPhotos(res); })
       .catch((err) => { console.log(`Ошибка: ${err}`); })
   }
 
   function getAlbums() {
-    //setAlbums(albumsArr);
     api.getAlbums()
       .then((res) => { setAlbums(res); })
       .catch((err) => { console.log(`Ошибка: ${err}`); })
   }
 
   function getPosts() {
-    //setPosts(postsArr);
     api.getPosts()
       .then((res) => { setPosts(res); })
       .catch((err) => { console.log(`Ошибка: ${err}`); })
   }
 
   function handleAddPost(postData) {
-    //setPosts([...posts, post]);
     api.postMessage(postData)
       .then((res) => { setPosts([...posts, res]); })
       .catch((err) => { console.log(`Ошибка: ${err}`); })
