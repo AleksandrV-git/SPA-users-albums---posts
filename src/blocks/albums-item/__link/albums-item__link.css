@@ -1,0 +1,10 @@
+.albums-item__link {
+  min-height: 157px;
+  border-radius: 15px;
+  background-color: rgb(241, 241, 241);
+  transition: .1s;
+}
+
+.albums-item__link:hover {
+  box-shadow: 0 0 0 2px rgb(209, 210, 214);
+}

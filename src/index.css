@@ -9,6 +9,8 @@
 @import url(blocks/post-list/post-list.css);
 @import url(blocks/post-item/post-item.css);
 @import url(blocks/post-form/post-form.css);
+@import url(blocks/album-list/album-list.css);
+@import url(blocks/albums-item/albums-item.css);
 
 /* модификаторы блоков */
 
@@ -23,7 +25,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
 }

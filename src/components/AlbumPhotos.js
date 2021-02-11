@@ -7,7 +7,7 @@ const AlbumPhotos = React.memo(({photos, getPhotos}) => {
   
   let { id } = useParams();
 
-  const albumPhotos = photos.filter(photo => photo.albumId === id);
+  const albumPhotos = photos.filter(photo => photo.albumId == id);
 
   React.useEffect(() => {
     getPhotos();

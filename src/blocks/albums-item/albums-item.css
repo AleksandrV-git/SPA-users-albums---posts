@@ -1,0 +1,13 @@
+@import URL(./__title-container/albums-item__title-container.css);
+@import URL(./__user-icon/albums-item__user-icon.css);
+@import URL(./__title/albums-item__title.css);
+@import URL(./__link/albums-item__link.css);
+@import URL(./__description/albums-item__description.css);
+
+.albums-item {
+  box-sizing: border-box;
+  min-height: 157px;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgb(241, 241, 241);
+}
